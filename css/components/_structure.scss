@@ -1,0 +1,32 @@
+
+/*------------------------------------*\
+    Structure
+\*------------------------------------*/
+
+/*
+ * Structuring elements
+ */
+
+
+//---------- Structure html tags ---------
+
+body {
+    background: $white;
+}
+header, section, footer {
+    @extend .transition-fast;
+    float: left;
+    width: 100%;
+}
+
+
+//---------- Structure classes ---------
+
+.container {
+    max-width: 1000px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+
+

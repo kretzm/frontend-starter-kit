@@ -1,0 +1,34 @@
+
+/*------------------------------------*\
+    Typography
+\*------------------------------------*/
+
+/*
+ * All styling is done in a modular fashion, so each component should have it's own sass file
+ * 
+ */
+
+
+//---------- Typeface ---------
+
+body {
+    font-family: helvetica, arial, sans-serif;
+}
+
+
+
+//---------- Headers ---------
+
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+h4 {
+    font-size: 18px;
+}

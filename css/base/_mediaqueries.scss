@@ -1,0 +1,55 @@
+
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+/*
+ * Defining the break points and media queries mixin
+ */
+
+
+//---------- Breakpoint Variables ---------
+
+$tablet-start:      481px;
+$desk-start:        1024px;
+
+$mobile-end:        $tablet-start - 1px;
+$tablet-end:        $desk-start - 1px;
+
+
+
+//---------- Media Query Mixin ---------
+
+@mixin media-query($media-query){
+
+    @if $media-query == mobile {
+
+        @media only screen and (max-width:$mobile-end) { @content; }
+
+    }
+
+    @if $media-query == tablet {
+
+        @media only screen and (max-width:$tablet-end) { @content; }
+
+    }
+
+    @if $media-query == tablet-only {
+
+        @media only screen and (min-width:$tablet-start) and (max-width:$tablet-end) { @content; }
+
+    }
+
+    @if $media-query == tablet-and-up {
+
+        @media only screen and (min-width:$tablet-start) { @content; }
+
+    }
+
+    @if $media-query == desk {
+
+        @media only screen and (min-width:$desk-start) { @content; }
+
+    }
+
+}

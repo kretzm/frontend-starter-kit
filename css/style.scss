@@ -1,0 +1,40 @@
+
+/*------------------------------------*\
+    XXXX STYLES
+\*------------------------------------*/
+
+/*
+ * All styling is done in a modular fashion, so each component should have it's own sass file
+ * 
+ */
+
+
+
+//---------- Requirements ---------
+
+@import "base/reset";
+@import "base/brand";               // colours
+@import "base/typography";
+@import "base/mediaqueries";
+@import "base/helper";              // variables
+
+
+//---------- Components ---------
+
+
+@import "components/structure";
+@import "components/inputs";
+
+
+@import "components/header";
+@import "components/footer";
+
+
+//---------- General ---------
+
+
+
+
+
+
+//---------- Other ---------

@@ -1,0 +1,73 @@
+
+/*------------------------------------*\
+    Helper Classes/Mixins
+\*------------------------------------*/
+
+/*
+ * Helper classes and mixins to use
+ */
+
+
+
+//---------- Border Radius ---------
+
+$border-radius:             3px;
+$border-light:              1px solid $gray;
+
+
+
+//---------- Border Radius ---------
+
+
+
+.border-radius {
+    -webkit-border-radius:  $border-radius;
+    -moz-border-radius:     $border-radius;
+    border-radius:          $border-radius;
+}
+
+
+
+//---------- Positioning/Alignment ---------
+
+@mixin box-shadow( $opacity: 0.1 ) {
+    -webkit-box-shadow:     0 2px 0 rgba(0,0,0,$opacity);
+    -moz-box-shadow:        0 2px 0 rgba(0,0,0,$opacity);
+    -ms-box-shadow:         0 2px 0 rgba(0,0,0,$opacity);
+    -o-box-shadow:          0 2px 0 rgba(0,0,0,$opacity);
+    box-shadow:             0 2px 0 rgba(0,0,0,$opacity);
+}
+
+
+
+//---------- Positioning/Alignment ---------
+
+.centered {
+    text-align: center;
+}
+.upper {
+    text-transform: uppercase;
+}
+.pull-right {
+    float: right;
+}
+
+
+//---------- Transitions ---------
+
+.transition-fast {
+    transition: all .3s;
+}
+
+
+
+
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+.visible {
+    display: block;
+    opacity: 1;
+}
