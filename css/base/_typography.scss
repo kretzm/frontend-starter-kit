@@ -4,16 +4,24 @@
 \*------------------------------------*/
 
 /*
- * All styling is done in a modular fashion, so each component should have it's own sass file
+ * All the typography styling in this hurr file
  * 
+ * Document-wide Typeface
+ * Headers
+ * Set rem font size + px fallback
  */
 
 
-//---------- Typeface ---------
+
+
+
+//---------- Document-wide Typeface ---------
 
 body {
     font-family: helvetica, arial, sans-serif;
 }
+
+
 
 
 
@@ -31,4 +39,21 @@ h3 {
 }
 h4 {
     font-size: 18px;
+}
+
+
+
+
+
+//---------- Set a rem font size with pixel fallback ---------
+
+// usage: @mixin font-size($size)
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
 }

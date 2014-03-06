@@ -5,7 +5,13 @@
 
 /*
  * Defining the break points and media queries mixin
+ *
+ * Breakpoint Variables
+ * Media Query Mixin
  */
+
+
+
 
 
 //---------- Breakpoint Variables ---------
@@ -18,38 +24,36 @@ $tablet-end:        $desk-start - 1px;
 
 
 
+
+
+
 //---------- Media Query Mixin ---------
 
+// usage: @include media-query(tablet-and-up) {}
 @mixin media-query($media-query){
 
+    // mobile only breakpoint
     @if $media-query == mobile {
-
         @media only screen and (max-width:$mobile-end) { @content; }
-
     }
-
+    
+    // mobile + tablet breakpoint
     @if $media-query == tablet {
-
         @media only screen and (max-width:$tablet-end) { @content; }
-
     }
 
+    // tablet only breakpoint
     @if $media-query == tablet-only {
-
         @media only screen and (min-width:$tablet-start) and (max-width:$tablet-end) { @content; }
-
     }
 
+    // tablet + desktop breakpoint
     @if $media-query == tablet-and-up {
-
         @media only screen and (min-width:$tablet-start) { @content; }
-
     }
 
+    // desktop only breakpoint
     @if $media-query == desk {
-
         @media only screen and (min-width:$desk-start) { @content; }
-
     }
-
 }

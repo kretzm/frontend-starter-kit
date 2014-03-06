@@ -1,6 +1,6 @@
 
 /*------------------------------------*\
-    XXXX STYLES
+    STYLES
 \*------------------------------------*/
 
 /*
@@ -26,13 +26,11 @@
 @import "components/inputs";
 
 
-@import "components/header";
-@import "components/footer";
-
 
 //---------- General ---------
 
-
+@import "sections/header";
+@import "sections/footer";
 
 
 

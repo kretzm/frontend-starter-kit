@@ -4,22 +4,32 @@
 \*------------------------------------*/
 
 /*
- * Helper classes and mixins to use
+ * Dope helper classes and mixins to use in your things yo.
+ * 
+ * Border Radius
+ * Box Shadow
+ * Positioning/Alignment/Visibility
+ * Transitions
  */
 
 
 
-//---------- Border Radius ---------
+
+
+//---------- Variables ---------
 
 $border-radius:             3px;
 $border-light:              1px solid $gray;
 
 
 
+
+
 //---------- Border Radius ---------
 
 
-
+// cross-browser border radius
+// usage: @extend .border-radius
 .border-radius {
     -webkit-border-radius:  $border-radius;
     -moz-border-radius:     $border-radius;
@@ -28,8 +38,12 @@ $border-light:              1px solid $gray;
 
 
 
-//---------- Positioning/Alignment ---------
 
+
+//---------- Box Shadow ---------
+
+// cross-browser box-shadowing
+// usage: @include box-shadow(0.2);
 @mixin box-shadow( $opacity: 0.1 ) {
     -webkit-box-shadow:     0 2px 0 rgba(0,0,0,$opacity);
     -moz-box-shadow:        0 2px 0 rgba(0,0,0,$opacity);
@@ -40,8 +54,11 @@ $border-light:              1px solid $gray;
 
 
 
-//---------- Positioning/Alignment ---------
 
+
+//---------- Positioning/Alignment/Visibility ---------
+
+// usage @extend .________;
 .centered {
     text-align: center;
 }
@@ -51,18 +68,6 @@ $border-light:              1px solid $gray;
 .pull-right {
     float: right;
 }
-
-
-//---------- Transitions ---------
-
-.transition-fast {
-    transition: all .3s;
-}
-
-
-
-
-
 .hidden {
     display: none;
     opacity: 0;
@@ -71,3 +76,30 @@ $border-light:              1px solid $gray;
     display: block;
     opacity: 1;
 }
+
+
+
+
+
+//---------- Transitions ---------
+
+// all-in-one transition
+// usage: @extend .transition
+.transition {
+    transition: all .3s;
+}
+
+// cross-browser transitions that need multiple arguments
+// usage: @include transition(color .3s ease);
+@mixin transition ($args...) {
+  -webkit-transition:       $args;
+  -moz-transition:          $args;
+  -ms-transition:           $args;
+  -o-transition:            $args;
+  transition:               $args;
+}
+
+
+
+
+
