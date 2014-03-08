@@ -20,7 +20,7 @@ body {
     background: $white;
 }
 header, section, footer {
-    @extend .transition-fast;
+    @extend .transition;
     float: left;
     width: 100%;
 }

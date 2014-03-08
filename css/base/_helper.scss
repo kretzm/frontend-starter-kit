@@ -76,6 +76,21 @@ $border-light:              1px solid $gray;
     display: block;
     opacity: 1;
 }
+.word-wrap {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+// cross browser opacity
+// usage: @include opacity(0.8);
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
 
 
 
@@ -89,8 +104,8 @@ $border-light:              1px solid $gray;
     transition: all .3s;
 }
 
-// cross-browser transitions that need multiple arguments
-// usage: @include transition(color .3s ease);
+// cross-browser transitions that need one or specific multiple arguments
+// usage: @include transition(color .3s ease, font-size .5s ease);
 @mixin transition ($args...) {
   -webkit-transition:       $args;
   -moz-transition:          $args;
