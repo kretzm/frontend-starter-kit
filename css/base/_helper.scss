@@ -83,6 +83,9 @@ $border-light:              1px solid $gray;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
 }
+.nobr {
+    white-space: nowrap;
+}
 
 // cross browser opacity
 // usage: @include opacity(0.8);
