@@ -1,4 +1,4 @@
-sass-framework
+frontend starter kit
 ==============
 
-Generic SASS framework template
+Housing a bunch of starter kit files, tools and configs for front-end projects
